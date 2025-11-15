@@ -1,103 +1,80 @@
-import Image from "next/image";
+import HeroSection from "@/components/hero-section";
+import Globe from "@/components/globe";
+import Footer from "@/components/footer";
+import { AnimatedBeamMultipleOutputDemo } from "@/components/animated-beam-demo-multiple-output";
+import { UptimeStatus } from "@/components/uptimestatus";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <div className="flex flex-col min-h-screen">
+        <div className="relative grid min-h-screen grid-cols-[2.5rem_1fr_auto_1fr_2.5rem] grid-rows-[1fr_1px_auto_1px_1fr] bg-white [--pattern-fg:var(--color-gray-950)]/10 dark:bg-gray-950 dark:[--pattern-fg:var(--color-white)]/10">
+          {/* Left decorative bar */}
+          <div className="col-start-1 row-span-full  row-start-1 border-r border-r-[--pattern-fg] bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Right decorative bar */}
+          <div className="col-start-5 row-span-full row-start-1 border-l border-l-[--pattern-fg] bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"></div>
+
+          <div className="col-start-2 col-span-3 row-start-3 flex items-center justify-center w-full px-4 sm:px-6 lg:px-8">
+            <div className="w-full max-w-6xl">
+              <div className="border border-dashed border-neutral-300 mt-1 mb-3">
+                <HeroSection />
+              </div>
+              <div className="border border-dashed border-neutral-300 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl pr-4 pl-4 pb-4">
+                <div className="flex-1 w-full md:w-auto mb-4 md:mb-0">
+                  <Globe />
+                </div>
+
+                <div className="border border-dashed  p-4 w-full md:w-auto shadow-sm">
+                  <h2 className=" text-xl font-semibold">Global Operations</h2>
+
+                  <ul className="mt-2 text-gray-600 dark:text-gray-300">
+                    <li>
+                      Deployed at Changi Airport, Singapore with future
+                      operations in India, Taiwan and USA.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="border border-dashed border-neutral-300 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mt-2 pr-4 pl-4 pb-4">
+                <div className="flex-1 w-full md:w-auto mb-4 md:mb-0">
+                  <AnimatedBeamMultipleOutputDemo />
+                </div>
+                <div className="border border-dashed p-6 w-auto md:w-auto shadow-sm ">
+                  <h2 className="text-xl font-semibold">
+                    Introducing Our 5G Core
+                  </h2>
+                  <p className="mt-2 text-gray-600 dark:text-gray-300">
+                    Seamlessly Fecth data with our smart integradted IOT E-sim
+                    modules.
+                  </p>
+                  <p className="mt-2 text-gray-600 dark:text-gray-300">
+                    Use the Theta-X adaptive layer and dashboard to monitor
+                    everything.
+                  </p>
+                  <p className="mt-2 text-gray-600 dark:text-gray-300">
+                    Blazing fast Automated Security and Rapid Alerts.
+                  </p>
+                </div>
+              </div>
+              <div className="border border-dashed border-neutral-300 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mt-2 pr-2 pl-2 pb-2">
+                <UptimeStatus />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="relative grid min-h-screen grid-cols-[2.5rem_1fr_auto_1fr_2.5rem] grid-rows-[1fr_1px_auto_1px_1fr] bg-white [--pattern-fg:var(--color-gray-950)]/10 dark:bg-gray-950 dark:[--pattern-fg:var(--color-white)]/10">
+          {/* Left decorative bar */}
+          <div className="col-start-1 row-span-full  row-start-1 border-r border-r-[--pattern-fg] bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"></div>
+
+          {/* Right decorative bar */}
+          <div className="col-start-5 row-span-full row-start-1 border-l border-l-[--pattern-fg] bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"></div>
+          <div className="col-start-2 col-span-3 row-start-3 flex items-center justify-center w-full px-4 sm:px-6 lg:px-8 ">
+            <Footer />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
