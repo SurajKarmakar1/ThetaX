@@ -45,7 +45,7 @@ export default function Home() {
                     Introducing Our 5G Core
                   </h2>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">
-                    Seamlessly Fecth data with our smart integradted IOT E-sim
+                    Seamlessly Fecth data with our smart integrated IOT E-sim
                     modules.
                   </p>
                   <p className="mt-2 text-gray-600 dark:text-gray-300">
