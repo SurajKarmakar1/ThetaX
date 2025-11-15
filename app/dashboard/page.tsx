@@ -6,7 +6,7 @@ import { AppSidebar } from "@/components/app-sidebar";
 export default function DashboardPage() {
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen w-full font-sans antialiased ">
+      <div className="flex min-h-screen w-full font-sans antialiased  ">
         <AppSidebar />
         <main className="flex flex-1 flex-col bg-background">
           <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border border-dashed border-neutral-300 bg-background px-4 ml-6 mt-6 mr-6">
