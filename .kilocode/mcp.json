@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "@magicuidesign/mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@magicuidesign/mcp@latest"
+      ],
+      "alwaysAllow": [
+        "getComponents",
+        "getUIComponents",
+        "getAnimations",
+        "getTextAnimations",
+        "getButtons",
+        "getBackgrounds",
+        "getDeviceMocks",
+        "getSpecialEffects"
+      ]
+    }
+  }
+}
