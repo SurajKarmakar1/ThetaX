@@ -21,11 +21,11 @@ export default function Home() {
                 <HeroSection />
               </div>
               <div className="border border-dashed border-neutral-300 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl pr-4 pl-4 pb-4">
-                <div className="flex-1 w-full md:w-auto mb-4 md:mb-0">
+                <div className="flex-1 w-full md:w-auto mb-4 md:mb-0 sm:block md:block">
                   <Globe />
                 </div>
 
-                <div className="border border-dashed  p-4 w-full md:w-auto shadow-sm">
+                <div className="border border-dashed  p-4 w-full md:w-auto shadow-sm ">
                   <h2 className=" text-xl font-semibold">Global Operations</h2>
 
                   <ul className="mt-2 text-gray-600 dark:text-gray-300">

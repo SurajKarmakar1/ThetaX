@@ -3,11 +3,11 @@ import { BorderBeam } from "@/components/ui/border-beam";
 
 export default function LoginPage() {
   return (
-    <div className="grid min-h-svh lg:grid-cols-2 ">
+    <div className="grid min-h-svh lg:grid-cols-2 border border-dashed border-neutral-300 m-5">
       <div className="flex flex-col gap-4 p-6 md:p-10">
-        <div className="flex justify-center gap-2 md:justify-start">
+        <div className="flex justify-center gap-2 md:justify-start ">
           <a href="#" className="flex items-center gap-2 font-medium">
-            <div className="bg-white text-primary-foreground flex  items-center justify-center rounded-2xl shadow-md shadow-zinc-300/20 dark:bg-gray-950 dark:shadow-none">
+            <div className="bg-white text-primary-foreground flex  items-center justify-center rounded-2xl shadow-md shadow-zinc-300/20 dark:bg-gray-950 dark:shadow-none ">
               <img
                 src="/companyLOGO.png"
                 alt=""
@@ -16,10 +16,10 @@ export default function LoginPage() {
                 className="rounded-2xl bg-transparent"
               />
             </div>
-            <div className="text-xl font-sans antialiased">Theta-X</div>
+            <div className="text-lg font-sans antialiased ">Theta-X</div>
           </a>
         </div>
-        <div className="flex flex-1 items-center justify-center">
+        <div className="flex flex-1 items-center justify-center ">
           <div className="w-full max-w-sm relative  p-8 shadow-sm font-sans antialiased">
             <LoginForm />
             <BorderBeam
@@ -35,11 +35,12 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
-      <div className="bg-muted relative hidden lg:block m-20 border border-dashed border-neutral-300">
+
+      <div className="bg-neutral-100  hidden lg:block m-30 mb-20 border border-dashed border-neutral-300 relative">
         <img
           src="/dithered-image.png"
           alt="Image"
-          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale m-3 shadow-sm border border-dashed border-neutral-300"
+          className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale m-3 shadow-sm  border-dashed border-neutral-300 "
         />
       </div>
     </div>

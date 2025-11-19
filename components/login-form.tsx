@@ -1,13 +1,12 @@
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
   FieldSeparator,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@/components/ui/field";
 
 export function LoginForm({
   className,
@@ -24,7 +23,13 @@ export function LoginForm({
         </div>
         <Field>
           <FieldLabel htmlFor="email">Email</FieldLabel>
-          <Input id="email" type="email" placeholder="m@example.com" required />
+          <input
+            id="email"
+            type="email"
+            placeholder="m@example.com"
+            required
+            className="border border-dashed border-neutral-300 shadow-none rounded-none focus:outline-0 p-1.5"
+          />
         </Field>
         <Field>
           <div className="flex items-center">
@@ -36,7 +41,12 @@ export function LoginForm({
               Forgot your password?
             </a>
           </div>
-          <Input id="password" type="password" required />
+          <input
+            id="password"
+            type="password"
+            required
+            className="border border-dashed border-neutral-300 shadow-none rounded-none focus:outline-0 p-1.5"
+          />
         </Field>
         <Field>
           <Button type="submit">Login</Button>
@@ -52,7 +62,7 @@ export function LoginForm({
             </svg>
             Login with GitHub
           </Button>
-          <FieldDescription className="text-center">
+          <FieldDescription className="text-center mt-2">
             Don&apos;t have an account?{" "}
             <a href="#" className="underline underline-offset-4">
               Sign up
@@ -61,5 +71,5 @@ export function LoginForm({
         </Field>
       </FieldGroup>
     </form>
-  )
+  );
 }
